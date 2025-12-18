@@ -37,3 +37,25 @@ export const ConfirmLike: Story = {
     </Modal>
   ),
 };
+
+export const Closed: Story = {
+  args: {
+    visible: false,
+  },
+  render: (args) => (
+    <Modal {...args}>
+      <div>This content is hidden</div>
+    </Modal>
+  ),
+};
+
+export const OnlyText: Story = {
+  args: {
+    visible: true,
+  },
+  render: (args) => (
+    <Modal {...args}>
+      <p style={{ margin: 0 }}>This is a simple modal with text only. No buttons. No header. Just content.</p>
+    </Modal>
+  ),
+};
