@@ -8,15 +8,15 @@ type ModalProps = {
 };
 
 export default function Modal({ visible, children }: ModalProps) {
-  if (!visible) {
-    return null;
-  }
+  if (!visible) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-window">
-        <button className="modal-close">×</button>
-        {children}
+        <button className="modal-close" aria-label="Close">
+          ×
+        </button>
+        <div className="modal-content">{children}</div>
       </div>
     </div>
   );
