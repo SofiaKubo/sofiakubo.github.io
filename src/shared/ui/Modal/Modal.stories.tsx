@@ -63,7 +63,7 @@ export const OnlyText: Story = {
   },
   render: (args) => (
     <Modal {...args}>
-      <p style={{ margin: 0 }}>This is a simple modal with text only.</p>
+      <p style={{ margin: 0 }}>This is a simple modal with text only</p>
     </Modal>
   ),
 };
