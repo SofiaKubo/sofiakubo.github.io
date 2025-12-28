@@ -1,21 +1,24 @@
 import React from 'react';
-import type { ReactNode } from 'react';
 import './Modal.css';
 
-type ModalProps = {
+export interface ModalProps {
   visible: boolean;
-  children: ReactNode;
-};
+  children: React.ReactNode;
+  className?: string;
+}
 
-export default function Modal({ visible, children }: ModalProps) {
-  if (!visible) return null;
-
+export default function Modal({ visible, children, className }: ModalProps) {
   return (
-    <div className="modal-overlay">
-      <div className="modal-window">
-        <button className="modal-close" aria-label="Close">
+    <div
+      className={['modal-overlay', className].filter(Boolean).join(' ')}
+      data-visible={visible ? 'true' : 'false'}
+      aria-hidden={!visible}
+    >
+      <div className="modal-window" role="dialog" aria-modal="true">
+        <button className="modal-close" aria-label="Close" type="button">
           ×
         </button>
+
         <div className="modal-content">{children}</div>
       </div>
     </div>
