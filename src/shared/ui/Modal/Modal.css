@@ -1,4 +1,4 @@
-/* ===== Modal overlay (background mask) ===== */
+/* ===== Overlay ===== */
 
 .modal-overlay {
   position: fixed;
@@ -13,21 +13,21 @@
   padding: 24px;
 }
 
-/* ===== Visibility control ===== */
+/* ===== Visibility ===== */
 
-.modal-overlay[data-visible="false"] {
+.modal-overlay[data-visible='false'] {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.modal-overlay[data-visible="true"] {
+.modal-overlay[data-visible='true'] {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-/* ===== Modal window ===== */
+/* ===== Window ===== */
 
 .modal-window {
   position: relative;
@@ -45,29 +45,30 @@
 
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 12px;
+  z-index: 2;
+  top: 8px;
+  right: 14px;
 
   border: none;
   background: transparent;
 
-  font-size: 18px;
+  font-size: 38px;
   line-height: 1;
 
+  color: #ffffff;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .modal-close:hover {
   opacity: 1;
 }
 
-/* ===== Modal content ===== */
+/* ===== Content ===== */
 
 .modal-content {
   padding: 20px 14px 18px;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }

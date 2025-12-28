@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import Modal from './Modal';
-import './Modal.css';
+import './Modal.stories.css';
 
 const meta: Meta<typeof Modal> = {
   title: 'shared/Modal',
@@ -30,8 +30,12 @@ export const ConfirmLike: Story = {
         <div className="confirm-body">Are you sure to leave?</div>
 
         <div className="confirm-actions">
-          <button className="confirm-btn">OK</button>
-          <button className="confirm-btn confirm-btn--primary">Cancel</button>
+          <button className="confirm-btn" type="button">
+            OK
+          </button>
+          <button className="confirm-btn" type="button">
+            Cancel
+          </button>
         </div>
       </div>
     </Modal>
@@ -43,9 +47,13 @@ export const Closed: Story = {
     visible: false,
   },
   render: (args) => (
-    <Modal {...args}>
-      <div>This content is hidden</div>
-    </Modal>
+    <div style={{ padding: 20 }}>
+      <p>Page content behind modal</p>
+
+      <Modal {...args}>
+        <div>This content is hidden</div>
+      </Modal>
+    </div>
   ),
 };
 
@@ -55,7 +63,7 @@ export const OnlyText: Story = {
   },
   render: (args) => (
     <Modal {...args}>
-      <p style={{ margin: 0 }}>This is a simple modal with text only. No buttons. No header. Just content.</p>
+      <p style={{ margin: 0 }}>This is a simple modal with text only.</p>
     </Modal>
   ),
 };

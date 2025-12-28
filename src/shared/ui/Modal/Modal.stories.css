@@ -1,0 +1,37 @@
+.confirm-header {
+  background: #5a5a5a;
+  color: #ffffff;
+
+  padding: 14px 16px;
+  margin: -20px -14px 20px -14px;
+
+  font-size: 24px;
+}
+
+.confirm-body {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.confirm-btn {
+  min-width: 88px;
+  padding: 8px 14px;
+
+  border: 1px solid #bdbdbd;
+  background: #f0f0f0;
+
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.confirm-btn:hover {
+  background: #ffffff;
+  border-color: #3b82f6;
+}
