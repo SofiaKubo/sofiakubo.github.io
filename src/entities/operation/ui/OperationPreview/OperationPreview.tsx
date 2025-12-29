@@ -9,13 +9,17 @@ export interface OperationPreviewProps {
 export default function OperationPreview({ operation }: OperationPreviewProps) {
   return (
     <div className="operation-preview">
-      <p className="operation-amount">${operation.amount}</p>
+      <div className="operation-preview__header">
+        <span className="operation-preview__amount">${operation.amount}</span>
 
-      <p className="operation-category">{operation.category.name}</p>
+        <span className="operation-preview__category">{operation.category.name}</span>
+      </div>
 
-      <h2 className="operation-title">{operation.title}</h2>
+      <div className="operation-preview__body">
+        <h3 className="operation-preview__title">{operation.title}</h3>
 
-      <p className="operation-description">{operation.description}</p>
+        <p className="operation-preview__description">{operation.description}</p>
+      </div>
     </div>
   );
 }
