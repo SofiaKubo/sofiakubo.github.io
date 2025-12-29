@@ -1,0 +1,37 @@
+.operation-preview {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.operation-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.operation-category {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.operation-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 0;
+}
+
+.operation-description {
+  font-size: 14px;
+  color: #4b5563;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
