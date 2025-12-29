@@ -10,7 +10,7 @@ export default function OperationPreview({ operation }: OperationPreviewProps) {
   return (
     <div className="operation-preview">
       <div className="operation-preview__header">
-        <span className="operation-preview__amount">${operation.amount}</span>
+        <span className="operation-preview__amount">${operation.amount.toFixed(2)}</span>
 
         <span className="operation-preview__category">{operation.category.name}</span>
       </div>
