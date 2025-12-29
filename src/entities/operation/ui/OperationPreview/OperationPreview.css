@@ -45,6 +45,7 @@
 .operation-preview__description {
   margin: 0;
   color: #555;
+  line-height: 1.4;
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
