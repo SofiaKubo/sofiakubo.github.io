@@ -2,11 +2,12 @@
   background: #ffffff;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
   display: flex;
   flex-direction: column;
   gap: 14px;
+  max-width: 520px;
 }
 
 .operation-preview__header {
@@ -16,7 +17,7 @@
 }
 
 .operation-preview__amount {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   color: #111;
 }
@@ -37,15 +38,17 @@
 
 .operation-preview__title {
   margin: 0;
-  font-size: 15px;
-  font-weight: 500;
-  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .operation-preview__description {
   margin: 0;
   color: #555;
   line-height: 1.4;
+  font-size: 14px;
+  
 
   display: -webkit-box;
   -webkit-line-clamp: 2;

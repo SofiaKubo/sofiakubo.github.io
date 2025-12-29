@@ -38,7 +38,7 @@ export const LongDescription: Story = {
         'Bought fruits, vegetables, bread, milk, cheese and some snacks for the weekend. ' +
         'Also picked up a few household items and cleaning supplies. ' +
         'This description is intentionally long to demonstrate how text truncation works.',
-      amount: 128.9,
+      amount: 45.67,
       date: '2024-03-18',
       category: {
         id: 'cat-1',

@@ -1,19 +1,12 @@
-/* ===== Overlay ===== */
-
 .modal-overlay {
   position: fixed;
   inset: 0;
-
   background: rgba(0, 0, 0, 0.45);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 24px;
 }
-
-/* ===== Visibility ===== */
 
 .modal-overlay[data-visible='false'] {
   opacity: 0;
@@ -27,35 +20,26 @@
   pointer-events: auto;
 }
 
-/* ===== Window ===== */
-
 .modal-window {
   position: relative;
 
   width: 420px;
-  background: #ffffff;
-
+  background: #fff;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-
   overflow: hidden;
 }
-
-/* ===== Close button ===== */
 
 .modal-close {
   position: absolute;
   z-index: 2;
   top: 8px;
   right: 14px;
-
   border: none;
   background: transparent;
-
   font-size: 38px;
   line-height: 1;
-
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -64,11 +48,8 @@
   opacity: 1;
 }
 
-/* ===== Content ===== */
-
 .modal-content {
   padding: 20px 14px 18px;
-
   display: flex;
   flex-direction: column;
 }
