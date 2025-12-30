@@ -1,12 +1,14 @@
 import React from 'react';
 import type { Product } from '../../model/types';
 import './ProductDetails.css';
+import CartButton from 'src/features/cart/ui/CartButton/CartButton';
 
 export interface ProductDetailsProps {
   product: Product;
+  cartCount: number;
 }
 
-export default function ProductDetails({ product }: ProductDetailsProps) {
+export default function ProductDetails({ product, cartCount }: ProductDetailsProps) {
   return (
     <div className="product-details">
       <div className="product-details__image">
@@ -23,9 +25,9 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         <div className="product-details__footer">
           <span className="product-details__price">${product.price.toFixed(2)}</span>
 
-          <button type="button" className="product-details__add-to-cart" disabled>
-            Add to cart
-          </button>
+          <div className="product-details__cart-button">
+            <CartButton count={cartCount} />
+          </div>
         </div>
       </div>
     </div>
