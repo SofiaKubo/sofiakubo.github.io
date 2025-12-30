@@ -21,7 +21,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         <p className="product-details__description">{product.description}</p>
 
         <div className="product-details__footer">
-          <span className="product-details__price">${product.price}</span>
+          <span className="product-details__price">${product.price.toFixed(2)}</span>
 
           <button type="button" className="product-details__add-to-cart" disabled>
             Add to cart
