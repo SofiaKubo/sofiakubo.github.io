@@ -1,22 +1,38 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ProductDetails from './ProductDetails';
+import ProductPreview from './ProductPreview';
 
-const meta: Meta<typeof ProductDetails> = {
-  title: 'entities/Product/ProductDetails',
-  component: ProductDetails,
+const meta: Meta<typeof ProductPreview> = {
+  title: 'entities/Product/ProductPreview',
+  component: ProductPreview,
   argTypes: {
     product: { control: false },
   },
 };
-
 export default meta;
 
-type Story = StoryObj<typeof ProductDetails>;
+type Story = StoryObj<typeof ProductPreview>;
 
-export const Default: Story = {
+export const ShortDescription: Story = {
   args: {
     product: {
       id: 'prod-1',
+      title: 'Wireless Headphones',
+      description: 'High-quality wireless headphones suitable for everyday use.',
+      price: 199.99,
+      image: '/images/headphones.avif',
+      category: {
+        id: 'cat-1',
+        name: 'Electronics',
+      },
+    },
+    cartCount: 0,
+  },
+};
+
+export const LongDescription: Story = {
+  args: {
+    product: {
+      id: 'prod-2',
       title: 'Wireless Headphones',
       description:
         'High-quality wireless headphones with active noise cancellation, long battery life and comfortable ear cushions. Suitable for everyday use, work and travel. These premium headphones feature advanced Bluetooth 5.0 technology for seamless connectivity, touch controls for easy operation, and a foldable design for portability. The rechargeable battery provides up to 30 hours of continuous playback, and the quick charge feature gives you 5 hours of use with just 10 minutes of charging. Compatible with all major devices and voice assistants.',
@@ -36,8 +52,7 @@ export const WithItemsInCart: Story = {
     product: {
       id: 'prod-1',
       title: 'Wireless Headphones',
-      description:
-        'High-quality wireless headphones with active noise cancellation, long battery life and comfortable ear cushions. Suitable for everyday use, work and travel. These premium headphones feature advanced Bluetooth 5.0 technology for seamless connectivity, touch controls for easy operation, and a foldable design for portability. The rechargeable battery provides up to 30 hours of continuous playback, and the quick charge feature gives you 5 hours of use with just 10 minutes of charging. Compatible with all major devices and voice assistants.',
+      description: 'High-quality wireless headphones suitable for everyday use.',
       price: 199.99,
       image: '/images/headphones.avif',
       category: {
