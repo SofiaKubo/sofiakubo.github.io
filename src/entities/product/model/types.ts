@@ -11,3 +11,5 @@ export interface Product {
   image: string;
   category: ProductCategory;
 }
+
+export type CartProduct = Pick<Product, 'id' | 'title' | 'price' | 'image'>;
