@@ -6,7 +6,6 @@ const meta: Meta<typeof ProductCartItem> = {
   component: ProductCartItem,
   argTypes: {
     product: { control: false },
-    quantity: { control: false },
   },
 };
 
