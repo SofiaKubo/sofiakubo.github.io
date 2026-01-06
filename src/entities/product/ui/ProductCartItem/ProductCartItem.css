@@ -69,16 +69,30 @@
 }
 
 .product-cart-item__remove {
-  border: none;
-  background: transparent;
+  height: 38px;
+  padding: 0 14px;
+
+  border-radius: 6px;
+  border: 1px solid #f2c2c2;
+  background-color: #fff;
 
   font-size: 14px;
-  color: #d32f2f;
+  font-weight: 500;
+  color: #c0392b;
 
   cursor: pointer;
-  padding: 4px 6px;
+  user-select: none;
+
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .product-cart-item__remove:hover {
-  text-decoration: underline;
+  background-color: #ffecec;
+  border-color: #e6a8a8;
 }
+
+.product-cart-item__remove:active {
+  background-color: #ffdede;
+}
+
+
