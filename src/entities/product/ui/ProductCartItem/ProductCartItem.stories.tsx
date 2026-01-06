@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ProductCartItem from './ProductCartItem';
 
 const meta: Meta<typeof ProductCartItem> = {
-  title: 'features/Cart/ProductCartItem',
+  title: 'entities/Product/ProductCartItem',
   component: ProductCartItem,
   argTypes: {
     product: { control: false },
